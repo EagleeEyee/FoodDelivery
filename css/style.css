@@ -1,0 +1,309 @@
+/* CSS reset  */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+/* CSS Variable  */
+:root {
+    --navbar-height: 59px;
+}
+
+/* Navigation Bar  */
+#navbar {
+    display: flex;
+    align-items: center;
+    position: relative;
+    position: sticky;
+    top: 0px;
+}
+
+#navbar::before{
+    content: "";
+    background-color: black;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    height: 88%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+.social{
+    float: right;
+    display: flex;
+    
+}
+.link {
+    text-decoration: none;
+    color: #b7b7b7;
+    margin: 7px;
+    /* width: 41px; */
+    height: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background: rgb(28, 28, 28); */
+    border-radius: 10px;
+    position: relative;
+    transition: 0.4s;
+}
+
+.link:hover {
+    transform: rotate(45deg);
+}
+
+.link::before {
+    content: " ";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: #373737;
+    border-radius: 10px;
+    transition: opasity 0.2s;
+}
+
+.link:hover::before {
+    opacity: 0.4;
+}
+
+.link:nth-child(1)::before {
+    background: #c32aa3;
+}
+
+.link:nth-child(2)::before {
+    background: #1da1f2;
+}
+
+.link:nth-child(3)::before {
+    background: #25d366;
+}
+
+.link:nth-child(4)::before {
+    background: #0a66c2;
+}
+
+.link:hover::before {
+    transform: translate(-4px, -4px);
+    filter: blur(10px);
+}
+
+.link i {
+    font-size: 1em;
+    transition: all 0.4s;
+}
+
+.link:hover i {
+    color: #c8c8c8;
+    transform: rotate(-45deg);
+}
+
+.link:hover i.instagram {
+    color: #c32aa3;
+}
+
+.link:hover i.twitter {
+    color: #1da1f2;
+}
+
+.link:hover i.whatsapp {
+    color: #25d366;
+}
+
+.link:hover i.linkedin {
+    color: #0a66ca;
+}
+/* Navigation Bar: Logo and Image  */
+#logo {
+    margin: 10px 26px;
+}
+
+#logo img {
+    height: 49px;
+    margin: 3px 5px;
+
+}
+
+/* Navigation Bar: List Styling  */
+
+#navbar ul{
+    display: flex;
+}
+
+#navbar ul li{
+    list-style: none;
+    font-size: 1.3rem;
+    font-family: 'Kanit', sans-serif;
+}
+
+#navbar ul li a{
+    color: white;
+    display: block;
+    padding: 3px 22px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+#navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+/* home section  */
+#home{
+    display: flex;
+    flex-direction: column;
+    padding: 3px 200px;
+    height: 536px;
+    justify-content: center;
+    align-items: center;
+}
+#home::before{
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background:url('../bg1.jpg') no-repeat center center/cover;
+    height: 612px;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+#home h1{
+    color: aliceblue;
+    text-align: center;
+}
+#home p{
+    color: aliceblue;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: 'Kanit', sans-serif;
+}
+/* services Section  */
+#services{
+    margin: 35px;
+    display: flex;
+}
+#services .box{
+    border: 2px solid rgb(214, 119, 17);
+    padding: 34px;
+    margin: 25px 6px;
+    border-radius: 10px;
+    background-color: rgb(235 230 224);
+
+}
+#services .box img{
+    height: 142px;
+    margin: auto;
+    display: block;
+}
+#services .box p{
+    font-family: 'Kanit', sans-serif;
+}
+#services{}
+#services{}
+
+/* Client Section  */
+#client-section{
+    position: relative;
+}
+#client-section::before{
+    content: "";
+    position: absolute;
+    background: url('../bg3.jpg');
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.4;
+}
+
+#clients{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.client-item{
+    padding: 34px;
+}
+#clients img{
+    height: 124px;
+}
+
+/* contact section  */
+#contact{
+    position: relative;
+    /* height: 300px; */
+}
+#contact ::before{
+    content: "";
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    background: url('../bg4.jpg')no-repeat center center/cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.3;
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+}
+#contact-box input,
+#contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1rem;
+
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Kanit', sans-serif;
+    color:rgb(160, 211, 232);
+
+}
+/* Footer  */
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
+
+/* Utility classes */
+.h-primary{
+    font-size: 3.8rem;
+    padding: 12px;
+    font-family: 'Kanit', sans-serif;
+    
+
+}
+.h-secondary{
+    font-size: 2.1rem;
+    padding: 12px;
+    font-family: 'Kanit', sans-serif;
+
+}
+
+.btn{
+    padding: 6px 20px;
+    border: 2px solid white;
+    background-color: brown;
+    color: white;
+    margin: 17px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+}
